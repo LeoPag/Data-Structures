@@ -6,23 +6,36 @@ It is commonly used to implement priority queues, which are data structures that
 In a binary heap, the heap property states that for any given node i, the value of the parent node is greater (or smaller) than or equal to the values of its child nodes. This property ensures that the maximum (or minimum) element is always at the root of the heap.
 Heaps have efficient operations for insertion, deletion, and retrieval of the maximum (or minimum) element. These operations typically have logarithmic time complexity, making heaps suitable for various applications such as sorting, graph algorithms, and scheduling.
 
-In our implementation, the Heap object features the following methods:
+<img align="right" width="280"  src="Images/heap.png">
 
-- push(val): Add the input value val to the heap --- O(logN)
+<div>
+  <p style="float: left;">
+    In our implementation, the Heap object features the following methods:  
+
+- push(val): Add the input value val to the heap --- O(logN)                    
 - pull(): Get and remove the top element from the heap --- O(logN)
 - peek(): Get the top element of the heap --- O(1)
+</div>
 
 
-## Trie
-A trie, also known as a prefix tree or digital tree, is a tree-based data structure used for efficient retrieval and storage of strings or sequences of characters. It is particularly useful for applications involving dictionary or prefix-based searching.
-In a trie, each node represents a single character or a part of a string. The root of the trie represents an empty string, and each child node represents a character that extends the current string. The edges of the trie are labeled with characters, and the paths from the root to the leaf nodes represent complete strings.
+
+
+## Trie 
+<img align="right" width="200"  src="Images/Trie.png">
+A trie, also known as a prefix tree or digital tree, is a tree-based data structure used for efficient retrieval and storage of strings or sequences of characters. It is particularly useful for applications involving dictionary or prefix-based searching. 
+In a trie, each node represents a single character or a part of a string. The root of the trie represents an empty string, and each child node represents a character that extends the current string. The edges of the trie are labeled with characters, and the paths from the root to the leaf nodes represent complete strings. 
 One key feature of a trie is its ability to store and retrieve strings with a time complexity proportional to the length of the string, regardless of the number of strings stored in the trie. This makes tries efficient for tasks like string search, autocomplete, and dictionary lookup.
 
+
+<div>
+  <p style="float: left;">
 In our implementation, the Trie object features the following methods:
 
 - add_word(word): Add word to the Trie --- O(len(word))
 - search_word(word): Return True if word is in the Trie --- O(len(word))
 - search_prefix(prefix): Return True if prefix is in the Trie --- O(len(prefix))
+</div>
+
 
 
 ## Deque
@@ -32,6 +45,8 @@ A deque, short for "double-ended queue," is a data structure that allows element
 In a deque, elements can be added or removed from the front (left side) or the back (right side) of the deque. This flexibility makes it useful for scenarios where you need to efficiently add or remove elements from either end, such as managing a sliding window of elements or implementing algorithms like breadth-first search.
 
 In our implementation, the Deque object is implemented as a Linked List, featuring the following methods:
+
+<img align="right" width="500"  src="Images/deque">
 
 - append_right(val): Add an element to the end of the queue --- O(1)
 - append_left(val): Add an element to the front of the queue --- O(1)
@@ -50,6 +65,8 @@ The LRU cache works based on the principle that items that have been accessed or
 The LRU cache provides fast lookup operations in O(1) time complexity, as it typically uses a combination of a hash map and a doubly linked list. The hash map allows for quick access to items by their keys, and the doubly linked list keeps track of the order of item usage. By maintaining the order of recently accessed items, the LRU cache can efficiently determine which items to evict when the cache is full.
 
 LRU caches are commonly used in various applications where efficient caching is required, such as database systems, web servers, and caching mechanisms in programming languages. They help improve performance by reducing the time and resources required to retrieve frequently accessed data.
+
+<img align="right" width="500"  src="Images/lru.png">
 
 In our implementation,the LRUCache object features the following methods:
 
