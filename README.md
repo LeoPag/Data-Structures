@@ -6,9 +6,23 @@ It is commonly used to implement priority queues, which are data structures that
 In a binary heap, the heap property states that for any given node i, the value of the parent node is greater (or smaller) than or equal to the values of its child nodes. This property ensures that the maximum (or minimum) element is always at the root of the heap.
 Heaps have efficient operations for insertion, deletion, and retrieval of the maximum (or minimum) element. These operations typically have logarithmic time complexity, making heaps suitable for various applications such as sorting, graph algorithms, and scheduling.
 
-In our implementation, the Heap object features the following methods:
 
-- push(val): Add the input value val to the heap --- O(logN)
+<div>
+  <p style="float: left;">
+    In our implementation, the Heap object features the following methods:  
+
+- push(val): Add the input value val to the heap --- O(logN)                    
+- pull(): Get and remove the top element from the heap --- O(logN)
+- peek(): Get the top element of the heap --- O(1)
+  </p>
+  <img src="Images/heap.png" alt="Image" width="200" style="float: right;">
+</div>
+
+
+
+In our implementation, the Heap object features the following methods:  
+
+- push(val): Add the input value val to the heap --- O(logN)                        ![Alt Text](Images/heap.png)
 - pull(): Get and remove the top element from the heap --- O(logN)
 - peek(): Get the top element of the heap --- O(1)
 
