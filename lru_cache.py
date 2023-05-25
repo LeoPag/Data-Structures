@@ -35,10 +35,7 @@ class LRUCache(object):
         self.cache = {}
 
 
-    """
-    Append node to end of linked list - O(1)
-    """
-    def append(self,node):
+    def __append(self,node):
 
         self.tail.prec.next = node
         node.prec = self.tail.prec
@@ -47,10 +44,7 @@ class LRUCache(object):
         node.next = self.tail
 
 
-    """
-    Remove node from linked list - O(1)
-    """
-    def remove(self,node):
+    def __remove(self,node):
         node.prec.next = node.next
         node.next.prec = node.prec
 
@@ -66,9 +60,9 @@ class LRUCache(object):
         """
         if key in self.cache:
 
-            self.remove(self.map[key])
+            self.__remove(self.map[key])
             new_node = Node(key)
-            self.append(new_node)
+            self.__append(new_node)
             self.map[key] = new_node
 
             return self.cache[key]
@@ -86,16 +80,16 @@ class LRUCache(object):
         :rtype: None
         """
         if key in self.cache:
-            self.remove(self.map[key])
+            self.__remove(self.map[key])
 
         elif len(self.cache) == self.cap:
             k = self.head.next.val
-            self.remove(self.head.next)
+            self.__remove(self.head.next)
             self.cache.pop(k)
             self.map.pop(k)
 
         new_node = Node(key)
-        self.append(new_node)
+        self.__append(new_node)
         self.cache[key] = value
         self.map[key] = new_node
 

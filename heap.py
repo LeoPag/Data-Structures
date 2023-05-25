@@ -1,7 +1,7 @@
 """
 The Heap is a popular data structure which allows to retrieve min or max values of an array in efficient logarithmic time.
-A MinHeap is a balanced binary tree where the value of each parent node is less than the values of both of its children.
-We can add a new element in the heap, remove the top node (minimum value), or just take a look at the this value.
+A MinHeap is implemented in the form of a balanced binary tree where the value of each parent node is less than the values of both of its children.
+We can add a new element in the heap, remove the top node (minimum value), or just take a look at this value.
 A MaxHeap can be built from a MinHeap by storing the inverse of the values in the MinHeap.
 """
 
