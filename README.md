@@ -53,8 +53,8 @@ LRU caches are commonly used in various applications where efficient caching is 
 
 In our implementation,the LRUCache object features the following methods:
 
-- get(key): Get the corresponding value to the provided key - O(1)
-- put(key,value): Update the cache with a new key-value pair - O(1)
+- get(key): Get the corresponding value to the provided key --- O(1)
+- put(key,value): Update the cache with a new key-value pair --- O(1)
 
 
 
