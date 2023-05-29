@@ -74,4 +74,35 @@ In our implementation,the LRUCache object features the following methods:
 - put(key,value): Update the cache with a new key-value pair --- O(1)
 
 
+## Red Black Tree
+
+A red–black tree is a specialised binary search tree data structure noted for fast storage
+and retrieval of ordered information, and a guarantee that operations will complete within a known time.
+Compared to other self-balancing binary search trees, the nodes in a red-black tree hold an extra bit called
+"color" representing "red" and "black" which is used when re-organising the tree to ensure that it is always approximately balanced.
+
+Insertion and deletion of an element both have logarithmic time complexity.
+
+A valid Red-Black Tree T has 5 properties:
+
+1) Every node in T is either red or black.
+2) The root node of T is black.
+3) Every NULL node is black
+4) If a node is red, both of its children are black.
+5) Every path from a root node to a NULL node has the same number of black nodes.
+
+
+<img align="right" width="500"  src="Images/rb_tree.png">
+
+In our implementation, the RedBlackTree object features the following methods:
+
+- insert(key): Insert the key to the tree --- O(logN)
+- delete_node(key): Delete the node corresponding to the key --- O(logN)
+- searchTree(k): Search the tree for the key k and return the corresponding node --- O(logN)
+- minimum(): Find the node with the minimum key - O(logN)
+- maximum(): Find the node with the maximum key - O(logN)
+- get_root(): Return the root of the tree --- O(1)
+- pretty_print(): Print the tree structure on the screen --- O(N)
+
+
 
